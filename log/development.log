@@ -2013,3 +2013,748 @@ Processing by PoliciesController#show as HTML
 Completed 200 OK in 65ms (Views: 49.9ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/policies" for 127.0.0.1 at 2018-03-04 11:31:46 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PoliciesController#index as HTML
+  Rendering policies/index.html.erb within layouts/application
+  [1m[36mPolicy Load (1.7ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.1ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.1ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.1ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.1ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.1ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered policies/index.html.erb within layouts/application (381.0ms)
+Completed 401 Unauthorized in 406ms (ActiveRecord: 5.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“search”' for #<#<Class:0x007f98dfdb86a0>:0x007f98dfdb2818>):
+    1: <h1>Policies Here</h1>
+    2: 
+    3: <%= form_tag policies_path, method: :get, authentication: false, id:“search” do %>
+    4: 
+    5:   <%= select_tag :location, options_from_collection_for_select(@locations, 'location', 'location'),:include_blank => true, :onchange => "this.form.submit();" %>
+    6: 
+  
+app/views/policies/index.html.erb:3:in `_app_views_policies_index_html_erb___4488384655763555799_70147283734980'
+Started GET "/policies" for 127.0.0.1 at 2018-03-04 11:32:31 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PoliciesController#index as HTML
+  Rendering policies/index.html.erb within layouts/application
+  [1m[36mPolicy Load (0.6ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.1ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.1ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.1ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.1ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.1ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered policies/index.html.erb within layouts/application (360.4ms)
+Completed 401 Unauthorized in 382ms (ActiveRecord: 5.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“search”' for #<#<Class:0x007fec13f88fc0>:0x007fec13f91738>):
+    1: <h1>Policies Here</h1>
+    2: 
+    3: <%= form_tag policies_path, method: :get, authentication: false, id:“search” do %>
+    4: 
+    5:  <%= select_tag :location, options_from_collection_for_select(@locations, ‘location’, ‘location’),:include_blank => true, :onchange => “this.form.submit();” %>
+    6: 
+  
+app/views/policies/index.html.erb:3:in `_app_views_policies_index_html_erb___3368485665223429346_70325962034900'
+Started GET "/policies" for 127.0.0.1 at 2018-03-04 11:33:13 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PoliciesController#index as HTML
+  Rendering policies/index.html.erb within layouts/application
+  [1m[36mPolicy Load (0.7ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.1ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.1ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.1ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.1ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.1ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.1ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.1ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered policies/index.html.erb within layouts/application (361.8ms)
+Completed 401 Unauthorized in 389ms (ActiveRecord: 4.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `‘location’' for #<#<Class:0x007f8bb5748c98>:0x007f8bb5742e60>
+Did you mean?  @locations):
+    2: 
+    3: <%= form_tag policies_path, method: :get, authentication: false, id:'search' do %>
+    4: 
+    5:  <%= select_tag :location, options_from_collection_for_select(@locations, ‘location’, ‘location’),:include_blank => true, :onchange => 'this.form.submit();' %>
+    6: 
+    7: <% end  %>
+    8: 
+  
+app/views/policies/index.html.erb:5:in `block in _app_views_policies_index_html_erb___4293855028521998009_70119020962000'
+app/views/policies/index.html.erb:3:in `_app_views_policies_index_html_erb___4293855028521998009_70119020962000'
+Started GET "/policies" for 127.0.0.1 at 2018-03-04 11:33:16 -0500
+Processing by PoliciesController#index as HTML
+  Rendering policies/index.html.erb within layouts/application
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered policies/index.html.erb within layouts/application (397.0ms)
+Started GET "/policies" for 127.0.0.1 at 2018-03-04 11:33:17 -0500
+Completed 401 Unauthorized in 406ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/policies" for 127.0.0.1 at 2018-03-04 11:33:17 -0500
+Processing by PoliciesController#index as HTML
+  
+Processing by PoliciesController#index as HTML
+  Rendering policies/index.html.erb within layouts/application
+ActionView::Template::Error (undefined local variable or method `‘location’' for #<#<Class:0x007f8bb5748c98>:0x007f8bb561a178>
+Did you mean?  @locations):
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendering policies/index.html.erb within layouts/application
+    2: 
+    3: <%= form_tag policies_path, method: :get, authentication: false, id:'search' do %>
+    4: 
+    5:  <%= select_tag :location, options_from_collection_for_select(@locations, ‘location’, ‘location’),:include_blank => true, :onchange => 'this.form.submit();' %>
+    6: 
+    7: <% end  %>
+    8: 
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  
+app/views/policies/index.html.erb:5:in `block in _app_views_policies_index_html_erb___4293855028521998009_70118998737620'
+app/views/policies/index.html.erb:3:in `_app_views_policies_index_html_erb___4293855028521998009_70118998737620'
+  [1m[36mPolicy Load (0.4ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/policies" for 127.0.0.1 at 2018-03-04 11:33:17 -0500
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+Processing by PoliciesController#index as HTML
+Started GET "/policies" for 127.0.0.1 at 2018-03-04 11:33:17 -0500
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+Processing by PoliciesController#index as HTML
+  Rendering policies/index.html.erb within layouts/application
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendering policies/index.html.erb within layouts/application
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.2ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered policies/index.html.erb within layouts/application (1263.2ms)
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+Completed 401 Unauthorized in 1318ms (ActiveRecord: 1.3ms)
+
+
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered policies/index.html.erb within layouts/application (1344.4ms)
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+Completed 401 Unauthorized in 1454ms (ActiveRecord: 1.4ms)
+
+
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+ActionView::Template::Error (undefined local variable or method `‘location’' for #<#<Class:0x007f8bb5748c98>:0x007f8bb6a4a300>
+Did you mean?  @locations):
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+    2: 
+    3: <%= form_tag policies_path, method: :get, authentication: false, id:'search' do %>
+    4: 
+    5:  <%= select_tag :location, options_from_collection_for_select(@locations, ‘location’, ‘location’),:include_blank => true, :onchange => 'this.form.submit();' %>
+    6: 
+    7: <% end  %>
+    8: 
+ActionView::Template::Error (undefined local variable or method `‘location’' for #<#<Class:0x007f8bb5748c98>:0x007f8bb6a409b8>
+Did you mean?  @locations):
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  
+Started GET "/policies" for 127.0.0.1 at 2018-03-04 11:33:18 -0500
+    2: 
+    3: <%= form_tag policies_path, method: :get, authentication: false, id:'search' do %>
+    4: 
+    5:  <%= select_tag :location, options_from_collection_for_select(@locations, ‘location’, ‘location’),:include_blank => true, :onchange => 'this.form.submit();' %>
+    6: 
+    7: <% end  %>
+    8: 
+  
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+app/views/policies/index.html.erb:5:in `block in _app_views_policies_index_html_erb___4293855028521998009_70119020713780'
+app/views/policies/index.html.erb:3:in `_app_views_policies_index_html_erb___4293855028521998009_70119020713780'
+app/views/policies/index.html.erb:5:in `block in _app_views_policies_index_html_erb___4293855028521998009_70119020713780'
+app/views/policies/index.html.erb:3:in `_app_views_policies_index_html_erb___4293855028521998009_70119020713780'
+Processing by PoliciesController#index as HTML
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered policies/index.html.erb within layouts/application (1730.2ms)
+  Rendered policies/index.html.erb within layouts/application (1744.7ms)
+  Rendering policies/index.html.erb within layouts/application
+Completed 401 Unauthorized in 1847ms (ActiveRecord: 0.7ms)
+
+
+Completed 401 Unauthorized in 1773ms (ActiveRecord: 1.0ms)
+
+
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  
+  
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+ActionView::Template::Error (undefined local variable or method `‘location’' for #<#<Class:0x007f8bb5748c98>:0x007f8bb326a250>
+Did you mean?  @locations):
+ActionView::Template::Error (undefined local variable or method `‘location’' for #<#<Class:0x007f8bb5748c98>:0x007f8bb52f1668>
+Did you mean?  @locations):
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+    2: 
+    3: <%= form_tag policies_path, method: :get, authentication: false, id:'search' do %>
+    4: 
+    5:  <%= select_tag :location, options_from_collection_for_select(@locations, ‘location’, ‘location’),:include_blank => true, :onchange => 'this.form.submit();' %>
+    6: 
+    7: <% end  %>
+    8: 
+    2: 
+    3: <%= form_tag policies_path, method: :get, authentication: false, id:'search' do %>
+    4: 
+    5:  <%= select_tag :location, options_from_collection_for_select(@locations, ‘location’, ‘location’),:include_blank => true, :onchange => 'this.form.submit();' %>
+    6: 
+    7: <% end  %>
+    8: 
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  
+  
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+app/views/policies/index.html.erb:5:in `block in _app_views_policies_index_html_erb___4293855028521998009_70118991419540'
+app/views/policies/index.html.erb:3:in `_app_views_policies_index_html_erb___4293855028521998009_70118991419540'
+app/views/policies/index.html.erb:5:in `block in _app_views_policies_index_html_erb___4293855028521998009_70118991419540'
+app/views/policies/index.html.erb:3:in `_app_views_policies_index_html_erb___4293855028521998009_70118991419540'
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.2ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered policies/index.html.erb within layouts/application (598.6ms)
+Completed 401 Unauthorized in 668ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `‘location’' for #<#<Class:0x007f8bb5748c98>:0x007f8bb6f4bd90>
+Did you mean?  @locations):
+    2: 
+    3: <%= form_tag policies_path, method: :get, authentication: false, id:'search' do %>
+    4: 
+    5:  <%= select_tag :location, options_from_collection_for_select(@locations, ‘location’, ‘location’),:include_blank => true, :onchange => 'this.form.submit();' %>
+    6: 
+    7: <% end  %>
+    8: 
+  
+app/views/policies/index.html.erb:5:in `block in _app_views_policies_index_html_erb___4293855028521998009_70119023313920'
+app/views/policies/index.html.erb:3:in `_app_views_policies_index_html_erb___4293855028521998009_70119023313920'
+Started GET "/policies" for 127.0.0.1 at 2018-03-04 11:34:26 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PoliciesController#index as HTML
+  Rendering policies/index.html.erb within layouts/application
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT DISTINCT(location) FROM "policies"[0m
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT "policies".* FROM "policies"[0m
+  Rendered policies/index.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 344ms (Views: 329.9ms | ActiveRecord: 1.5ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddDeviseToUsers (20180304163645)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddDeviseToUsers (20180304163727)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/policies" for 127.0.0.1 at 2018-03-04 11:41:41 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.5) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.5) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/policies" for 127.0.0.1 at 2018-03-04 11:41:58 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PoliciesController#index as HTML
+  Rendering policies/index.html.erb within layouts/application
+  [1m[36mPolicy Load (0.5ms)[0m  [1m[34mSELECT DISTINCT(location) FROM "policies"[0m
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT "policies".* FROM "policies"[0m
+  Rendered policies/index.html.erb within layouts/application (44.2ms)
+Completed 200 OK in 359ms (Views: 343.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-04 11:42:34 -0500
+Processing by WelcomeController#homepage as HTML
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 61ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddDeviseToUsers (20180304164302)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddDeviseToUsers (20180304164533)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to User (20180304164608)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20180304164742)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180304164742"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2018-03-04 11:50:15 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#homepage as HTML
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 292ms (Views: 278.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign-up" for 127.0.0.1 at 2018-03-04 11:50:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/sign-up"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/new_user_session_path" for 127.0.0.1 at 2018-03-04 11:50:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/new_user_session_path"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/registration" for 127.0.0.1 at 2018-03-04 11:50:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/registration"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/devise/registration" for 127.0.0.1 at 2018-03-04 11:50:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/devise/registration"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/devise/registrations" for 127.0.0.1 at 2018-03-04 11:50:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/devise/registrations"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-03-04 11:52:01 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#homepage as HTML
+Completed 401 Unauthorized in 17ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-04 11:52:02 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 313ms (Views: 291.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-04 11:52:11 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (2.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 59ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-04 11:52:13 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 69ms (Views: 66.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-04 11:52:18 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (2.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 80ms (Views: 78.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-04 11:52:20 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (2.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 80ms (Views: 77.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-04 11:52:22 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (2.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 63ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-04 11:52:22 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 63ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-04 11:52:24 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 63ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-04 11:53:25 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 79ms (Views: 77.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-04 11:54:44 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 66ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-04 11:54:58 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AnlYfKSfTcXF5Dc9JjHv6IvqZN9fgUbApAeCjatlFOdRQhk+GapidfqWu5MguKP/1152BLqUvxNpzZ5lSf/ksg==", "user"=>{"email"=>"hpatel1223@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hpatel1223@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "hpatel1223@gmail.com"], ["encrypted_password", "$2a$11$66CTQr1jt6JKqSIYUbdhXuehP/H5jMmLHm1PWx.E9GRUnx6KRVYEm"], ["created_at", "2018-03-04 16:54:58.638693"], ["updated_at", "2018-03-04 16:54:58.638693"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-03-04 16:54:58.642615"], ["last_sign_in_at", "2018-03-04 16:54:58.642615"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-03-04 16:54:58.644538"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 209ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-04 11:54:58 -0500
+Processing by WelcomeController#homepage as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 55ms (Views: 46.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-04 11:55:02 -0500
+Processing by WelcomeController#homepage as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 32.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/policies" for 127.0.0.1 at 2018-03-04 11:55:06 -0500
+Processing by PoliciesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering policies/index.html.erb within layouts/application
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT DISTINCT(location) FROM "policies"[0m
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT "policies".* FROM "policies"[0m
+  Rendered policies/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 51ms (Views: 43.2ms | ActiveRecord: 1.3ms)
+
+
