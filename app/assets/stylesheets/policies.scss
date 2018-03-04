@@ -1,3 +1,90 @@
 // Place all the styles related to the Policies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$gray: #F0F4F8;
+
+@import "neat/neat";
+
+
+@font-face {
+  font-family: 'Akzidenz Medium';
+  src: url("/assets/fonts/AkzidenzGrotesk-Medium.otf");
+}
+@font-face {
+  font-family: 'Akzidenz Bold';
+  src: url("/assets/fonts/AkzidenzGrotesk-Bold.otf");
+}
+
+
+@font-face {
+  font-family: 'Akzidenz Light';
+  src: url("/assets/fonts/AkzidenzGrotesk-Light.otf");
+}
+
+@font-face {
+  font-family: 'Akzidenz Regular';
+  src: url("/assets/fonts/AkzidenzGrotesk-Regular.otf");
+}
+
+
+$muli: 'Muli', sans-serif;
+$title: 'Akzidenz Bold', monospace;
+
+/* Rectangle 7: */
+
+
+h1 {
+  font-size:10em;
+}
+
+.nav {
+  height:10em;
+  width:100%;
+  background: #F0F4F8;
+  font-family: Muli-Light;
+  font-size: 14px;
+  color: #37393A;
+  text-align: left;
+
+  display: inline-flex;
+  .nav-content {
+    @include grid-column(12);
+  .back {
+    @include grid-column(1);
+    float: left;
+    margin-top: 3em;
+  }
+  .nav-title{
+    @include grid-column(4);
+    @include grid-shift(3);
+
+    font-size: 2rem;
+    line-height:2.4em;;
+  }
+}
+}
+
+
+
+.policy-head {
+  padding-top: 7em;
+  background: #F0F4F8;
+  .policymaker {
+    margin-left: 56px;
+    font-family: Muli-SemiBold;
+    font-size: 3em;
+    color: #5CA0C6;
+    text-align: left;
+    line-height: 16px;
+  }
+  .title {
+    margin-left: 56px;
+    margin-top: 0px;
+    font-family: Muli-Bold;
+    font-size: 7em;
+    color: #37393A;
+    text-align: left;
+  }
+
+}
