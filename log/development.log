@@ -2013,3 +2013,62 @@ Processing by PoliciesController#show as HTML
 Completed 200 OK in 65ms (Views: 49.9ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-04 11:30:35 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#homepage as HTML
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 652ms (Views: 644.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/policies" for 127.0.0.1 at 2018-03-04 11:30:46 -0500
+Processing by PoliciesController#index as HTML
+  Rendering policies/index.html.erb within layouts/application
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  DISTINCT(location) FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Policy Load (0.0ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered policies/index.html.erb within layouts/application (311.1ms)
+Completed 401 Unauthorized in 321ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `“search”' for #<#<Class:0x007fa2db549928>:0x007fa2d35a4fb0>):
+    1: <h1>Policies Here</h1>
+    2: 
+    3: <%= form_tag policies_path, method: :get, authentication: false, id:“search” do %>
+    4: 
+    5:   <%= select_tag :location, options_from_collection_for_select(@locations, 'location', 'location'),:include_blank => true, :onchange => "this.form.submit();" %>
+    6: 
+  
+app/views/policies/index.html.erb:3:in `_app_views_policies_index_html_erb__688978347699684326_70168720594820'
+Started GET "/policies" for 127.0.0.1 at 2018-03-04 11:34:52 -0500
+Processing by PoliciesController#index as HTML
+  Rendering policies/index.html.erb within layouts/application
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT DISTINCT(location) FROM "policies"[0m
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT "policies".* FROM "policies"[0m
+  Rendered policies/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 54ms (Views: 51.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/policies/1" for 127.0.0.1 at 2018-03-04 11:34:57 -0500
+Processing by PoliciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPolicy Load (0.4ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" WHERE "policies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering policies/show.html.erb within layouts/application
+  Rendered policies/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 34ms (Views: 28.1ms | ActiveRecord: 0.4ms)
+
+
