@@ -1,6 +1,12 @@
 <h1>Policies Here</h1>
 
-<% @policies.select("DISTINCT(location)").each do |p| %>
+<%= form_tag policies_path, method: :get, authentication: false, id:"search" do %>
+
+  <%= select_tag :location, options_for_select(@locations.each{ |p| [p.location]})’%>
+
+<% end  %>
+
+<% @locations.each do |p| %>
 	<a>
 		<%= p.location %>
 	</a>
@@ -13,7 +19,7 @@
     <%= form.label :title %><br>
     <%= form.text_field :title %>
   </p>
- 
+
   <p>
     <%= form.label :description %><br>
     <%= form.text_area :description %>
@@ -43,7 +49,7 @@
 				<%= policy.title%>
 			</td>
 		</tr>
-		
+
 		<tr class="desc">
 			<td>
 				<%= policy.description%>
@@ -54,7 +60,7 @@
 		<tr class="who">
 			<td>
 				<%= policy.policymakers%>
-				
+
 			</td>
 		</tr>
 		<tr class="links">
