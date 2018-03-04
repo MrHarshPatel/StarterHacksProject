@@ -1,8 +1,8 @@
 <h1>Policies Here</h1>
 
-<%= form_tag policies_path, method: :get, authentication: false, id:"search" do %>
+<%= form_tag policies_path, method: :get, authentication: false, id:“search” do %>
 
-  <%= select_tag :location, options_for_select(@locations.each{ |p| [p.location]})’%>
+ <%= select_tag :location, options_from_collection_for_select(@locations, ‘location’, ‘location’),:include_blank => true, :onchange => “this.form.submit();” %>
 
 <% end  %>
 
