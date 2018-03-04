@@ -6,6 +6,7 @@
 
 <% end  %>
 
+
 <% @locations.each do |p| %>
 	<a>
 		<%= p.location %>
@@ -50,13 +51,6 @@
 			</td>
 		</tr>
 
-		<tr class="desc">
-			<td>
-				<%= policy.description%>
-			</td>
-
-		</tr>
-
 		<tr class="who">
 			<td>
 				<%= policy.policymakers%>
@@ -68,11 +62,11 @@
 				<%= link_to 'Show', policy_path(policy)%>
 				<hr>
 			</td>
-
 		</tr>
 
 	<% end %>
 
 
 </table>
+
 

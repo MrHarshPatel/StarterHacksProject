@@ -2350,3 +2350,140 @@ Processing by PoliciesController#show as HTML
 Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-04 13:46:34 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#homepage as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (1.5ms)
+Started GET "/policies" for 127.0.0.1 at 2018-03-04 13:46:35 -0500
+Completed 200 OK in 1725ms (Views: 1672.8ms | ActiveRecord: 1.7ms)
+
+
+Processing by PoliciesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering policies/index.html.erb within layouts/application
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT DISTINCT(location) FROM "policies"[0m
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT "policies".* FROM "policies"[0m
+  Rendered policies/index.html.erb within layouts/application (91.2ms)
+Completed 200 OK in 193ms (Views: 181.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/policies/2" for 127.0.0.1 at 2018-03-04 13:46:42 -0500
+Processing by PoliciesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPolicy Load (0.4ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" WHERE "policies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering policies/show.html.erb within layouts/application
+  Rendered policies/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 93ms (Views: 77.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/policies" for 127.0.0.1 at 2018-03-04 13:48:56 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PoliciesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering policies/index.html.erb within layouts/application
+  [1m[36mPolicy Load (0.3ms)[0m  [1m[34mSELECT DISTINCT(location) FROM "policies"[0m
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT "policies".* FROM "policies"[0m
+  Rendered policies/index.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 507ms (Views: 462.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/policies/2" for 127.0.0.1 at 2018-03-04 13:49:05 -0500
+Processing by PoliciesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPolicy Load (0.4ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" WHERE "policies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering policies/show.html.erb within layouts/application
+  Rendered policies/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 127ms (Views: 115.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/policies" for 127.0.0.1 at 2018-03-04 13:49:08 -0500
+Processing by PoliciesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering policies/index.html.erb within layouts/application
+  [1m[36mPolicy Load (0.4ms)[0m  [1m[34mSELECT DISTINCT(location) FROM "policies"[0m
+  [1m[36mPolicy Load (1.2ms)[0m  [1m[34mSELECT "policies".* FROM "policies"[0m
+  Rendered policies/index.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 172ms (Views: 163.1ms | ActiveRecord: 1.9ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "policies" ("title", "description", "policymakers", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Waterloo Regional Budget Review"], ["description", "Key Points: ∙ Approximate tax increase: 2.74% ∙ Will focus on investment in transportation and paramedic services\n∙ Funding support provided to Hospice of Waterloo Region, Sexual Assault Support Centre of Waterloo Region, Fashion History Museum of Cambridge\n∙ Approximate budget total: 514 million\nThe planned region of Waterloo budget approved for 2018 is expected to cost households and additional $53. \nThis change includes a 2.74% tax increase, down from the 3.08% proposed at the beginning of deliberations. \nDespite the rise, the region accomplished a 0.25% decrease in the levy of taxpayer funds to be dedicated to the ongoing construction of the LRT, in spite of the $50 million increase to the project's overall cost. Organizations who will receive support grants include the Hospice of Waterloo Region ($250,000), the Sexual Assault Support Centre of Waterloo Region ($50,000), and the Fashion History Museum of Cambridge ($50,000). Budgetary considerations concluded with talk of a potential policy review surrounding funding of the region's cultural organizations.\n"], ["policymakers", "Clarence Ross"], ["location", "Waterloo, ON"], ["created_at", "2018-03-04 18:49:34.306927"], ["updated_at", "2018-03-04 18:49:34.306927"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "policies" ("title", "description", "policymakers", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Light Rail Transit Station Planning Proposal"], ["description", "New Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green Initiative "], ["policymakers", "Jane Smith"], ["location", "Waterloo, ON"], ["created_at", "2018-03-04 18:49:34.310372"], ["updated_at", "2018-03-04 18:49:34.310372"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "policies" ("title", "description", "policymakers", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Canadian Environmental Assessment Act Review"], ["description", "New Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green Initiative "], ["policymakers", "Catherine McKenna"], ["location", "Canada"], ["created_at", "2018-03-04 18:49:34.312825"], ["updated_at", "2018-03-04 18:49:34.312825"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "policies" ("title", "description", "policymakers", "location", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Railway Safety Act Review"], ["description", "New Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green InitiativeNew Green Initiative "], ["policymakers", "Justin Trudeau"], ["location", "Canada"], ["created_at", "2018-03-04 18:49:34.315418"], ["updated_at", "2018-03-04 18:49:34.315418"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[31mDELETE from development where name = 'policies'[0m
+  [1m[35m (1.2ms)[0m  [1m[31mDELETE from policies where name = 'somebody'[0m
+  [1m[35m (7.4ms)[0m  [1m[31mDELETE from policies where policymakers = 'somebody'[0m
+  [1m[35m (5.7ms)[0m  [1m[31mDELETE from policies where policymakers = 'hi'[0m
+  [1m[35m (5.7ms)[0m  [1m[31mDELETE from policies where policymakers = 'hello'[0m
+Started GET "/" for 127.0.0.1 at 2018-03-04 13:51:42 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#homepage as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 454ms (Views: 417.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/policies" for 127.0.0.1 at 2018-03-04 13:51:42 -0500
+Processing by PoliciesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering policies/index.html.erb within layouts/application
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT DISTINCT(location) FROM "policies"[0m
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT "policies".* FROM "policies"[0m
+  Rendered policies/index.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 163ms (Views: 153.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/policies/7" for 127.0.0.1 at 2018-03-04 13:51:45 -0500
+Processing by PoliciesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPolicy Load (0.4ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" WHERE "policies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering policies/show.html.erb within layouts/application
+  Rendered policies/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 101ms (Views: 86.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/policies/7" for 127.0.0.1 at 2018-03-04 13:53:18 -0500
+Processing by PoliciesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPolicy Load (0.1ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" WHERE "policies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering policies/show.html.erb within layouts/application
+  Rendered policies/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 114ms (Views: 108.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/policies/7" for 127.0.0.1 at 2018-03-04 13:53:48 -0500
+Processing by PoliciesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPolicy Load (0.1ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" WHERE "policies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering policies/show.html.erb within layouts/application
+  Rendered policies/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 132ms (Views: 125.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/policies/7" for 127.0.0.1 at 2018-03-04 13:53:49 -0500
+Processing by PoliciesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPolicy Load (0.2ms)[0m  [1m[34mSELECT  "policies".* FROM "policies" WHERE "policies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering policies/show.html.erb within layouts/application
+  Rendered policies/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 97ms (Views: 90.6ms | ActiveRecord: 0.5ms)
+
+
